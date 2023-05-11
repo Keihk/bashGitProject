@@ -42,14 +42,14 @@ jobs:
           
   repo_forked:
       
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     if: github.event_name == 'fork'
     needs: build
     env:
       user: Steven Univer
     steps:
       - name: Infom Steven
-        run: 
+        run: |
           echo "Hellp $user, this job is about to end."
           echo "Job has ended."
       
